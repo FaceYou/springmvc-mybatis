@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>西安邮电大学智慧农业监控系统</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=0.4,minimum-scale=0.4, maximum-scale=2.0">
+
+        <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+         <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+         <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!--[if lte IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div role="container">
+            <header role="header" class="header">
+                <div class="header-box">
+                    <div class="logo-box"><img src="./img/logo.png"></div>
+                    <div class="info-box">
+                        <span><img src='./img/clock.png'><span class="date"></span></span>
+                        <span class="user"><img src="./img/user2.png">欢迎您：<span class="userName">12345</span></span>
+                        <span class="layout"><img src="./img/key.png"><a >注销</a></span>
+                    </div>
+                    <div class="nav-box">
+                        <ul class="nav nav-pill nav-justified">
+                            <li class="active"><a href="">首 页</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">日光温室<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="eMonitor.html">环境监控</a></li>
+                                    <li><a href="liveData.html">数据实况</a></li>
+                                    <li><a href="analysisData.html">数据分析</a></li>
+                                    <li><a href="historicalData.html">历史数据</a></li>
+                                    <li><a href="cropInformation.html">农作物信息</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">视频监控<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="liveVideo.html">实时视频监控</a></li>
+                                    <li><a href="videoView.html">监控图像浏览</a></li>
+                                    <li><a href="videoControl.html">摄像监控控制</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">农业生产过程记录<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="farmingActivities.html">农事活动</a></li>
+                                    <li><a href="pesticideUsing.html">农药使用</a></li>
+                                    <li><a href="fertilizerNotes.html">施肥记录</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">办公自动化<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">日光温室管理</a></li>
+                                    <li><a href="">用户管理</a></li>
+                                    <li><a href="">公告</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="">大数据系统<span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                <li><a href="">#1</a></li>
+                                <li><a href="">#2</a></li>
+                                <li><a href="">#3</a></li>
+                              </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <main role="main" class="main">
+                <div class="main-box">
+                    <a href=""><img src="./img/massing.jpg"></a>
+                </div>
+            </main>
+            <footer role="footer" class="footer">
+                <div>版权所有：西安邮电大学</div>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+  		<script type="text/javascript" src="./js/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="js/util.js"></script>
+        <script type="text/javascript" src="js/view.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+        <script type="text/javascript">
+        	$('.layout').click(function(){
+        		
+     			$('.main').empty();
+            	$('.main').load("./analysisData.html .main-box",function(){
+            		$("head").append('<link>');
+            		$("head").children(':last').attr({
+            			rel:"stylesheet",
+            			href:"css/bootstrap-datetimepicker.min.css"
+            		});
+            		$("head").append('<link>');
+            		$("head").children(':last').attr({
+            			rel:"stylesheet",
+            			href:"css/analysisData.css"
+            		});
+            		var script2 = document.createElement("script");
+                    script2.src = "js/echarts.min.js";
+                    script2.type = "text/javascript";
+                    document.getElementsByTagName("body")[0].appendChild(script2);
+
+            		var script1 = document.createElement("script");
+                    script1.src = "js/bootstrap-datetimepicker.min.js";
+                    script1.type = "text/javascript";
+                    document.getElementsByTagName("body")[0].appendChild(script1);
+                    
+                    var script3 = document.createElement("script");
+                    script3.src = "js/analysisData.js";
+                    script3.type = "text/javascript";
+                    document.getElementsByTagName("body")[0].appendChild(script3);
+            	});
+        	})
+        	
+        </script>
+    </body>
+</html>

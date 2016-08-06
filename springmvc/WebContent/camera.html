@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拍照</title>
+	<style type="text/css">
+		#video{
+			width: 500px;
+			height: 500px;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<video id="video" controls="controls"></video>
+	<script type="text/javascript">
+		var video = document.getElementById('video');
+		var errocb = function () {
+                          console.log('sth wrong!');
+                     }
+		if (navigator.getUserMedia) {
+			console.log("11111111111111");
+			navigator.getUserMedia({'video':true},function (stream) {
+				video.src = stream;
+				video.play();
+			},errocb);
+		} else if(navigator.webkitGetUserMedia){
+			console.log('22222222222222222');
+			navigator.webkitGetUserMedia({'video':true},function (stream) {
+				video.src = window.URL.createObjectURL(stream);
+				video.play();
+			},errocb);
+		}
+	</script>
+</body>
+</html>
